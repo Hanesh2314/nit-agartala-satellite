@@ -77,7 +77,14 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createDepartment(department: InsertDepartment): Promise<Department> {
-    const [newDepartment] = await db.insert(departments).values(department).returning();
+    // Ensure requirements and responsibilities are arrays
+    const departmentData = {
+      ...department,
+      requirements: Array.isArray(department.requirements) ? department.requirements : [],
+      responsibilities: Array.isArray(department.responsibilities) ? department.responsibilities : []
+    };
+    
+    const [newDepartment] = await db.insert(departments).values(departmentData).returning();
     return newDepartment;
   }
 
