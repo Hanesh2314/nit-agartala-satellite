@@ -1,0 +1,339 @@
+
+Skip to main content
+
+
+H
+Switch teams
+Sites
+Builds
+Extensions
+Domains
+Members
+Audit log
+Security Scorecard
+Billing
+Team settings
+Visual editor dashboard
+Upgrade
+
+
+Sites
+sateres
+Switch sites
+
+News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Support
+Site navigation
+Site overview
+Site configuration
+Deploys
+Logs
+Metrics
+Domain management
+Forms
+Blobs
+Deploy detailsYour deploy failed due to an error
+Get started with Netlify
+4/7
+👋 Let’s build your first site!
+
+Dismiss
+
+Customize site name
+Make it your own
+
+Try a build plugin
+View available plugins
+
+Set up a build hook
+Try one here
+
+Connect a Git provider
+Set up continuous deployment
+
+Deploy again
+Learn how deploys work
+
+View deploy summary
+Check it out here
+
+View your site
+Find published deploy
+
+Deploy failed for sateres
+A failure prevented us from deploying your site.
+Why did it fail?
+Today at 3:55 PM
+
+Production: main@HEAD
+
+Functions
+Retry
+Deploy settings
+Delete deploy
+Fancy a game?
+This deploy is done, but hey, you can still play if you want to!
+
+Play game
+Deploy log
+Why did it fail?
+
+
+
+
+Maximize log
+
+Diagnosis
+The build failed due to TypeScript errors in the Vite project. The errors are related to missing modules and type declarations in various files of the project.
+
+Solution
+To address TypeScript errors like "Cannot find module" or "no exported member named", make sure that the referenced modules and types are correctly imported and declared in the respective files.
+
+Specifically for the missing module "@/types", ensure that the type declarations are present in the repository or installed as a package. Verify the file types/index.d.ts or similar exists in the project directory. If not, check if it needs to be restored or included from a specific source.
+
+For the build script failure with exit code 2, run the following steps:
+
+Verify that all dependencies are correctly installed by running npm install inside the client directory.
+Check and fix any TypeScript errors reported in the build log.
+Once the TypeScript errors are resolved, rebuild the project using npm run build.
+After addressing the TypeScript errors, commit the changes to trigger a new build on Netlify and verify if the build is successful.
+
+If the issue persists, consider updating the TypeScript version or Vite configuration based on the project requirements.
+
+For more information on managing dependencies and Node.js versions in Netlify builds, refer to the documentation for changing Node versions.
+
+Need more help? Go to Ask Netlify
+
+Retry diagnostics
+Netlify uses AI to analyze and generate solutions to fix deploy failures. It may not always understand the full context or produce a reliable, accurate answer. To learn more, please refer to our docs.
+
+Did you find this helpful? Your feedback helps improve this feature.
+
+
+
+Initializing
+Complete
+3:55:19 PM: build-image version: 59029cc38debec12b365d8cde2431251b878d6bf (noble)
+3:55:19 PM: buildbot version: 6fd01dd5bcb8672dc438365d7140cd2177dd562b
+3:55:19 PM: Fetching cached dependencies
+3:55:19 PM: Starting to download cache of 674.7MB
+3:55:21 PM: Finished downloading cache in 1.9s
+3:55:21 PM: Starting to extract cache
+3:55:29 PM: Finished extracting cache in 7.917s
+3:55:29 PM: Finished fetching cache in 9.888s
+3:55:29 PM: Starting to prepare the repo for build
+3:55:30 PM: Preparing Git Reference refs/heads/main
+3:55:34 PM: Custom functions path detected. Proceeding with the specified path: 'netlify/functions'
+3:55:34 PM: Custom build command detected. Proceeding with the specified command: 'cd client && npm install && npm run build'
+3:55:34 PM: Starting to install dependencies
+3:55:34 PM: Started restoring cached mise cache
+3:55:36 PM: Finished restoring cached mise cache
+3:55:36 PM: Python version set to 3.13.2
+3:55:36 PM: Ruby version set to 2.7.2
+3:55:36 PM: Go version set to 1.19
+3:55:37 PM: Using PHP version 8.3
+3:55:38 PM: Started restoring cached Node.js version
+3:55:38 PM: Finished restoring cached Node.js version
+3:55:39 PM: v22.14.0 is already installed.
+3:55:39 PM: Now using node v22.14.0 (npm v10.9.2)
+3:55:39 PM: Enabling Node.js Corepack
+3:55:39 PM: Started restoring cached build plugins
+3:55:39 PM: Finished restoring cached build plugins
+3:55:39 PM: Started restoring cached corepack dependencies
+3:55:39 PM: Finished restoring cached corepack dependencies
+3:55:39 PM: No npm workspaces detected
+3:55:39 PM: Started restoring cached node modules
+3:55:39 PM: Finished restoring cached node modules
+3:55:40 PM: Installing npm packages using npm version 10.9.2
+3:55:45 PM: added 76 packages, removed 111 packages, changed 3 packages, and audited 334 packages in 6s
+3:55:45 PM: 44 packages are looking for funding
+3:55:45 PM:   run `npm fund` for details
+3:55:45 PM: 5 moderate severity vulnerabilities
+3:55:45 PM: To address issues that do not require attention, run:
+3:55:45 PM:   npm audit fix
+3:55:45 PM: To address all issues (including breaking changes), run:
+3:55:45 PM:   npm audit fix --force
+3:55:45 PM: Run `npm audit` for details.
+3:55:45 PM: npm packages installed
+3:55:46 PM: Successfully installed dependencies
+3:55:46 PM: Starting build script
+3:55:47 PM: Detected 1 framework(s)
+3:55:47 PM: "vite" at version "5.4.14"
+3:55:47 PM: Section completed: initializing
+Building
+Failed
+3:55:48 PM: Netlify Build                                                 
+3:55:48 PM: ────────────────────────────────────────────────────────────────
+3:55:48 PM: ​
+3:55:48 PM: ❯ Version
+3:55:48 PM:   @netlify/build 30.0.1
+3:55:48 PM: ​
+3:55:48 PM: ❯ Flags
+3:55:48 PM:   accountId: 67d90787fb4fa1cb7c246516
+3:55:48 PM:   baseRelDir: true
+3:55:48 PM:   buildId: 67dbed0620a4c17b11dcf3d7
+3:55:48 PM:   deployId: 67dbed0620a4c17b11dcf3d9
+3:55:48 PM: ​
+3:55:48 PM: ❯ Current directory
+3:55:48 PM:   /opt/build/repo
+3:55:48 PM: ​
+3:55:48 PM: ❯ Config file
+3:55:48 PM:   /opt/build/repo/netlify.toml
+3:55:48 PM: ​
+3:55:48 PM: ❯ Context
+3:55:48 PM:   production
+3:55:48 PM: ​
+3:55:48 PM: build.command from netlify.toml                               
+3:55:48 PM: ────────────────────────────────────────────────────────────────
+3:55:48 PM: ​
+3:55:48 PM: $ cd client && npm install && npm run build
+3:55:49 PM: up to date, audited 334 packages in 908ms
+3:55:49 PM: 44 packages are looking for funding
+3:55:49 PM:   run `npm fund` for details
+3:55:49 PM: 5 moderate severity vulnerabilities
+3:55:49 PM: To address issues that do not require attention, run:
+3:55:49 PM:   npm audit fix
+3:55:49 PM: To address all issues (including breaking changes), run:
+3:55:49 PM:   npm audit fix --force
+3:55:49 PM: Run `npm audit` for details.
+3:55:49 PM: > satellite-client@1.0.0 build
+3:55:49 PM: > tsc && vite build
+3:55:52 PM: client/src/App.tsx(2,10): error TS2724: '"@/components/ui/toaster"' has no exported member named 'Toaster'. Did you mean 'Toast'?
+3:55:52 PM: client/src/components/DepartmentDetails.tsx(3,46): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/components/InteractiveSatellite.tsx(3,55): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/components/Satellite3D.tsx(3,28): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/components/ui/sidebar.tsx(6,10): error TS2724: '"@/hooks/use-mobile"' has no exported member named 'useIsMobile'. Did you mean 'useMobile'?
+3:55:52 PM: client/src/components/ui/toast.tsx(6,28): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/hooks/use-toast.ts(2,37): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/lib/departmentDetails.ts(1,34): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/lib/satelliteUtils.ts(1,28): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/pages/AdminPanelPage.tsx(19,21): error TS2322: Type '{ onLogin: (success: boolean) => void; }' is not assignable to type 'IntrinsicAttributes & AdminLoginProps'.
+3:55:52 PM:   Property 'onLogin' does not exist on type 'IntrinsicAttributes & AdminLoginProps'.
+3:55:52 PM: client/src/pages/AdminPanelPage.tsx(21,25): error TS2322: Type '{ onLogout: () => void; }' is not assignable to type 'IntrinsicAttributes & AdminDashboardProps'.
+3:55:52 PM:   Property 'onLogout' does not exist on type 'IntrinsicAttributes & AdminDashboardProps'.
+3:55:52 PM: client/src/pages/ApplicationFormPage.tsx(12,39): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+3:55:52 PM: client/src/pages/ApplicationFormPage.tsx(37,36): error TS2344: Type 'RouteParams' does not satisfy the constraint 'DefaultParams'.
+3:55:52 PM:   Index signature for type 'string' is missing in type 'RouteParams'.
+3:55:52 PM: client/src/pages/DepartmentDetailsPage.tsx(13,28): error TS2344: Type 'RouteParams' does not satisfy the constraint 'DefaultParams'.
+3:55:52 PM:   Index signature for type 'string' is missing in type 'RouteParams'.
+3:55:52 PM: client/src/pages/HomePage.tsx(61,14): error TS2741: Property 'onSave' is missing in type '{}' but required in type 'AboutUsEditorProps'.
+3:55:53 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+3:55:53 PM: ​
+3:55:53 PM: "build.command" failed                                        
+3:55:53 PM: ────────────────────────────────────────────────────────────────
+3:55:53 PM: ​
+3:55:53 PM:   Error message
+3:55:53 PM:   Command failed with exit code 2: cd client && npm install && npm run build (https://ntl.fyi/exit-code-2)
+3:55:53 PM: ​
+3:55:53 PM:   Error location
+3:55:53 PM:   In build.command from netlify.toml:
+3:55:53 PM:   cd client && npm install && npm run build
+3:55:53 PM: ​
+3:55:53 PM:   Resolved config
+3:55:53 PM:   build:
+3:55:53 PM:     base: /opt/build/repo
+3:55:53 PM:     command: cd client && npm install && npm run build
+3:55:53 PM:     commandOrigin: config
+3:55:53 PM:     environment:
+3:55:53 PM:       - DATABASE_URL
+3:55:53 PM:     publish: /opt/build/repo/client/dist
+3:55:53 PM:     publishOrigin: config
+3:55:53 PM:   functionsDirectory: /opt/build/repo/netlify/functions
+3:55:53 PM:   redirects:
+3:55:53 PM:     - from: /api/*
+      status: 200
+      to: /.netlify/functions/:splat
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+3:55:53 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+3:55:53 PM: Failing build: Failed to build site
+3:55:53 PM: Finished processing build request in 33.945s
+Deploying
+Skipped
+Cleanup
+Skipped
+Post-processing
+Skipped
+Docs
+Pricing
+Support
+Blog
+Changelog
+Terms
+© 2025 Netlify
+
