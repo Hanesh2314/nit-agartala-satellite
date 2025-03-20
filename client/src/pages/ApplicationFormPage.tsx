@@ -86,11 +86,9 @@ export default function ApplicationFormPage() {
   // Mutation for submitting application
   const submitMutation = useMutation({
     mutationFn: async (formData: FormData) => {
-      return apiRequest('POST', '/api/applicants', undefined, {
-        method: 'POST',
+      return apiRequest('POST', '/api/applicants', {
         body: formData,
-        headers: {}, // Don't set Content-Type, browser will set it with boundary
-        credentials: 'include',
+        // Don't set Content-Type, browser will set it with boundary for FormData
       });
     },
     onSuccess: () => {

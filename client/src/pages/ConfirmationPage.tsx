@@ -26,19 +26,19 @@ export default function ConfirmationPage() {
   const nextSteps = [
     {
       title: "Application Review",
-      description: "Our team will review your application and resume within 7-10 business days."
+      description: "The faculty advisor and team leads will review your application within the next 5-7 days."
     },
     {
-      title: "Initial Interview",
-      description: "If selected, you'll be invited for an initial video interview with the department team."
+      title: "Technical Interview",
+      description: "If shortlisted, you'll be invited to attend an interview with the current team members of your chosen department."
     },
     {
-      title: "Technical Assessment",
-      description: "Depending on the role, you may be asked to complete a technical assessment or case study."
+      title: "Team Assignment",
+      description: "Based on your skills and department preference, you'll be assigned specific tasks within the research satellite project."
     },
     {
-      title: "Final Decision",
-      description: "You'll be notified of our final decision, and if successful, we'll discuss onboarding details."
+      title: "Orientation",
+      description: "You'll attend an orientation meeting where you'll learn about project timelines, communication channels, and your role in the team."
     }
   ];
 
@@ -59,7 +59,7 @@ export default function ConfirmationPage() {
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4">Application Submitted!</h1>
             <p className="text-gray-400 max-w-xl mx-auto">
-              Thank you for applying to join our satellite team. We've received your application and will be in touch soon.
+              Thank you for applying to join the NIT Agartala RESEARCH SATELLITE project. We appreciate your interest in contributing to our mission. Our team will review your application shortly.
             </p>
           </motion.div>
 
