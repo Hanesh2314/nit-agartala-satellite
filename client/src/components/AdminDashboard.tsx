@@ -4,7 +4,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
-import type { Applicant, AboutUs } from '@/types';
+import { defaultDepartments } from '@/lib/departmentDetails';
+import type { Applicant, AboutUs, Department } from '@/types';
 import AboutUsEditor from './AboutUsEditor';
 import ApplicantDetailsModal from './ApplicantDetailsModal';
 
@@ -22,6 +23,11 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
   const { data: applicants, isLoading } = useQuery<Applicant[]>({
     queryKey: ['/api/admin/applicants'],
     refetchInterval: 30000, // Refresh every 30 seconds
+  });
+
+  // Fetch departments
+  const { data: departments = defaultDepartments } = useQuery<Department[]>({
+    queryKey: ['/api/departments'],
   });
 
   // Fetch about us content
@@ -130,7 +136,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                           {applicant.firstName} {applicant.lastName}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
-                          {applicant.departmentId}
+                          {departments.find((d: Department) => d.id === applicant.departmentId)?.name || `Department ${applicant.departmentId}`}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                           {applicant.email}
