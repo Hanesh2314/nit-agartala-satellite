@@ -53,29 +53,38 @@ export function getDepartmentById(departmentId: number, departments: Department[
 export const defaultDepartments: Department[] = [
   {
     id: 1,
-    name: "Engineering",
-    description: "Design and build cutting-edge satellite hardware and systems that operate in the harsh conditions of space.",
-    icon: "cogs",
+    name: "POWER SYSTEM",
+    description: "Design and build the power generation, storage, and distribution systems for satellite operations in space.",
+    icon: "bolt",
     color: "#4D9DE0",
-    requirements: ["Bachelor's degree in Aerospace/Mechanical Engineering", "Experience with CAD software", "Knowledge of spacecraft systems"],
-    responsibilities: ["Design satellite components", "Test hardware performance", "Collaborate with interdisciplinary teams"]
+    requirements: ["Knowledge of electrical circuits", "Experience with solar panels and battery systems", "Understanding of power management"],
+    responsibilities: ["Design power supply architecture", "Implement efficient energy harvesting", "Ensure continuous power for all satellite systems"]
   },
   {
     id: 2,
-    name: "Communications",
-    description: "Develop and maintain advanced communication systems that connect our satellites with ground stations.",
-    icon: "satellite-dish",
+    name: "ON-BOARD COMPUTER",
+    description: "Develop the central processing unit that controls all the satellite's functions and operations.",
+    icon: "microchip",
     color: "#F46036",
-    requirements: ["Degree in Electrical Engineering or related field", "RF communications experience", "Signal processing knowledge"],
-    responsibilities: ["Design communication protocols", "Implement signal processing algorithms", "Maintain ground station links"]
+    requirements: ["Programming skills", "Hardware interfacing knowledge", "Real-time operating systems experience"],
+    responsibilities: ["Create fault-tolerant systems", "Program satellite command sequences", "Manage data processing and storage"]
   },
   {
     id: 3,
-    name: "Data Science",
-    description: "Analyze and interpret the vast amounts of data collected by our satellite systems for valuable insights.",
-    icon: "chart-bar",
+    name: "COMMUNICATION SYSTEM",
+    description: "Build the systems that allow the satellite to send and receive data with ground stations on Earth.",
+    icon: "satellite-dish",
     color: "#7B5EA7",
-    requirements: ["Statistics or Computer Science degree", "Experience with Python and data analysis", "Machine learning expertise"],
-    responsibilities: ["Develop data processing pipelines", "Create ML models for satellite data", "Generate insights from collected data"]
+    requirements: ["RF and antenna design knowledge", "Signal processing experience", "Communication protocols understanding"],
+    responsibilities: ["Design transceiver systems", "Optimize bandwidth usage", "Implement error correction algorithms"]
+  },
+  {
+    id: 4,
+    name: "ATTITUDE DETERMINATION & CONTROL SYSTEM",
+    description: "Create the systems that determine and control the satellite's orientation and position in orbit.",
+    icon: "compass",
+    color: "#2ECC71",
+    requirements: ["Knowledge of control systems", "Experience with sensors and actuators", "Understanding of orbital mechanics"],
+    responsibilities: ["Design stabilization systems", "Implement precise positioning algorithms", "Manage altitude control mechanisms"]
   }
 ];

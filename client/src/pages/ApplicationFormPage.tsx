@@ -122,7 +122,7 @@ export default function ApplicationFormPage() {
     if (!email.trim()) errors.email = "Email is required";
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "Invalid email format";
     if (!selectedDepartmentId) errors.department = "Please select a department";
-    if (!experience) errors.experience = "Please select your experience level";
+    if (!experience) errors.experience = "Please select your current year of B.Tech";
     if (!skills.trim()) errors.skills = "Please list your key skills";
     
     setFormErrors(errors);
@@ -306,18 +306,17 @@ export default function ApplicationFormPage() {
                 <div className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="experience" className="text-sm font-medium text-gray-300">
-                      Years of Experience <span className="text-red-500">*</span>
+                      Current Year of B.Tech <span className="text-red-500">*</span>
                     </Label>
                     <Select value={experience} onValueChange={setExperience}>
                       <SelectTrigger className="bg-gray-800/50 border-gray-700">
-                        <SelectValue placeholder="Select years of experience" />
+                        <SelectValue placeholder="Select your current year" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-800 border-gray-700">
-                        <SelectItem value="0-1">Less than 1 year</SelectItem>
-                        <SelectItem value="1-3">1-3 years</SelectItem>
-                        <SelectItem value="3-5">3-5 years</SelectItem>
-                        <SelectItem value="5-10">5-10 years</SelectItem>
-                        <SelectItem value="10+">10+ years</SelectItem>
+                        <SelectItem value="1st">1st Year</SelectItem>
+                        <SelectItem value="2nd">2nd Year</SelectItem>
+                        <SelectItem value="3rd">3rd Year</SelectItem>
+                        <SelectItem value="4th">4th Year</SelectItem>
                       </SelectContent>
                     </Select>
                     {formErrors.experience && (
