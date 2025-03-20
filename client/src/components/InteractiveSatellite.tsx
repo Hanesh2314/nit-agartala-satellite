@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'wouter';
+import { useLocation } from 'wouter';
 import { motion } from 'framer-motion';
 import { useMobile } from '@/hooks/use-mobile';
 import type { Department, SatellitePart } from '@/types';
@@ -10,7 +10,7 @@ interface InteractiveSatelliteProps {
 }
 
 export default function InteractiveSatellite({ departments, onHover }: InteractiveSatelliteProps) {
-  const navigate = useNavigate();
+  const [_, setLocation] = useLocation();
   const isMobile = useMobile();
   const [hoveredPart, setHoveredPart] = useState<number | null>(null);
   const [satelliteParts, setSatelliteParts] = useState<SatellitePart[]>([]);
@@ -53,7 +53,7 @@ export default function InteractiveSatellite({ departments, onHover }: Interacti
   };
 
   const handlePartClick = (departmentId: number) => {
-    navigate(`/departments/${departmentId}`);
+    setLocation(`/departments/${departmentId}`);
   };
 
   return (
