@@ -3,7 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Phone, Clock, File } from 'lucide-react';
-import type { Applicant } from '@/types';
+import { useQuery } from '@tanstack/react-query';
+import { defaultDepartments } from '@/lib/departmentDetails';
+import type { Applicant, Department } from '@/types';
 
 interface ApplicantDetailsModalProps {
   applicant: Applicant;
@@ -12,6 +14,11 @@ interface ApplicantDetailsModalProps {
 }
 
 export default function ApplicantDetailsModal({ applicant, isOpen, onClose }: ApplicantDetailsModalProps) {
+  // Fetch departments
+  const { data: departments = defaultDepartments } = useQuery<Department[]>({
+    queryKey: ['/api/departments'],
+  });
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return new Intl.DateTimeFormat('en-US', {
@@ -67,16 +74,16 @@ export default function ApplicantDetailsModal({ applicant, isOpen, onClose }: Ap
           {/* Application Details */}
           <div className="space-y-3">
             <div>
-              <span className="text-sm text-gray-500">Department ID</span>
+              <span className="text-sm text-gray-500">Department</span>
               <div className="mt-1">
                 <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-400">
-                  {applicant.departmentId}
+                  {departments.find((d: Department) => d.id === applicant.departmentId)?.name || `Department ${applicant.departmentId}`}
                 </Badge>
               </div>
             </div>
             
             <div>
-              <span className="text-sm text-gray-500">Experience</span>
+              <span className="text-sm text-gray-500">B.Tech Year</span>
               <div className="mt-1 text-gray-300">
                 {applicant.experience}
               </div>

@@ -174,7 +174,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
           
           <TabsContent value="about">
             <AboutUsEditor
-              content={aboutUs?.content || "At SatelSys, we're pioneering the next generation of satellite technology. Our mission is to connect the world, monitor our planet, and explore the cosmos with cutting-edge satellite systems."}
+              content={aboutUs?.content || "At NIT Agartala's RESEARCH SATELLITE project, we're pioneering the next generation of satellite technology. Our mission is to design and build a research satellite with teams specializing in Power Systems, On-Board Computing, Communication Systems, and Attitude Control."}
               onSave={handleSaveAboutUs}
             />
           </TabsContent>
